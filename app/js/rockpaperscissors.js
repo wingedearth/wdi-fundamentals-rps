@@ -43,31 +43,52 @@ function getWinner(playerMove,computerMove) {
     var winner;
     if (playerMove==="rock")
     {
-        if (computerMove=="rock")
-            winner = "tie";
-        if (computerMove=="scissors")
-            winner = "player";
-        if (computerMove=="paper")
-            winner = "computer";    
+
+        switch (computerMove) {
+            case "rock":
+                winner = "tie";
+                break;
+            case "scissors":
+                winner = "player";
+                break;
+            case "paper":
+                winner = "computer";
+                break;
+        }
     }
+    
     if (playerMove==="scissors")
     {
-        if (computerMove=="scissors")
-            winner = "tie";
-        if (computerMove=="paper")
-            winner = "player";
-        if (computerMove=="rock")
-            winner = "computer";    
+
+        switch (computerMove) {
+            case "rock":
+                winner = "computer";
+                break;
+            case "scissors":
+                winner = "tie";
+                break;
+            case "paper":
+                winner = "player";
+                break;
+        }
     }
-    if (playerMove==="paper")
+
+        if (playerMove==="paper")
     {
-        if (computerMove=="paper")
-            winner = "tie";
-        if (computerMove=="rock")
-            winner = "player";
-        if (computerMove=="scissors")
-            winner = "computer";    
+
+        switch (computerMove) {
+            case "rock":
+                winner = "player";
+                break;
+            case "scissors":
+                winner = "computer";
+                break;
+            case "paper":
+                winner = "tie";
+                break;
+        }
     }
+
 
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
