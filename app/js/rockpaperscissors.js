@@ -99,7 +99,7 @@ function playToFive() {
         console.log("computer:", computerWins);
         if ((playerWins>=5) || (computerWins>=5))
         {
-            console.log("Overall Winner:");
+            console.log("Overall Winner:", win);
             //return [playerWins, computerWins];
             return win;
         }
